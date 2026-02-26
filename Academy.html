@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoreConcepts Academy — English Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav id="navbar">
+    <a class="logo" href="#">
+      <div class="logo-icon">CC</div>
+      <span>CoreConcepts <span class="logo-accent">Academy</span></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#features">Why Us</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="scrollTo('courses')">Start Learning →</button>
+    <button class="hamburger" id="hamburger">☰</button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#courses" onclick="closeMobile()">Courses</a>
+    <a href="#features" onclick="closeMobile()">Why Us</a>
+    <a href="#testimonials" onclick="closeMobile()">Reviews</a>
+    <a href="#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <div class="hero-bg-text">ENGLISH</div>
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-content">
+      <div class="hero-badge"><span class="badge-dot"></span> Pakistan's #1 English Academy</div>
+      <h1>Speak English<br/><span class="highlight">With Confidence</span></h1>
+      <p class="hero-sub">From basic alphabets to advanced communication — master English at your own pace with expert instructors and proven methods.</p>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="smoothScroll('courses')">View Courses</button>
+        <button class="btn-outline">Watch Demo ▶</button>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">15K+</div><div class="stat-label">Students</div></div>
+        <div class="stat"><div class="stat-divider"></div></div>
+        <div class="stat"><div class="stat-num">6</div><div class="stat-label">Levels</div></div>
+        <div class="stat"><div class="stat-divider"></div></div>
+        <div class="stat"><div class="stat-num">4.9★</div><div class="stat-label">Rating</div></div>
+        <div class="stat"><div class="stat-divider"></div></div>
+        <div class="stat"><div class="stat-num">98%</div><div class="stat-label">Success Rate</div></div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="floating-card card1">🎯 <span>Daily Practice</span></div>
+      <div class="floating-card card2">📖 <span>Grammar Mastery</span></div>
+      <div class="floating-card card3">🗣️ <span>Speaking Skills</span></div>
+      <div class="hero-circle">
+        <div class="circle-text">Basic<br/>to<br/>Advanced</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ COURSES ══ -->
+  <section id="courses">
+    <div class="section-header reveal">
+      <div class="section-tag">📚 Our Programs</div>
+      <h2 class="section-title">Choose Your Level</h2>
+      <p class="section-sub">All courses taught in Urdu & English. Start from scratch or pick up where you left off.</p>
+    </div>
+    <div class="courses-grid">
+
+      <div class="course-card reveal" data-course="Beginner English (A1)" data-price="1500" data-level="Beginner">
+        <div class="course-thumb thumb-a1">
+          <div class="level-badge">A1</div>
+          <div class="course-emoji">🌱</div>
+        </div>
+        <div class="course-body">
+          <div class="course-level-tag beginner">Beginner</div>
+          <div class="course-title">Beginner English — A1</div>
+          <div class="course-desc">Alphabets, basic words, greetings, numbers and simple sentences. Perfect for absolute beginners.</div>
+          <ul class="course-topics">
+            <li>✔ Alphabets & Phonics</li>
+            <li>✔ Basic Vocabulary (500 words)</li>
+            <li>✔ Simple Greetings & Introductions</li>
+            <li>✔ Numbers & Colors</li>
+          </ul>
+          <div class="course-meta">
+            <div class="course-info"><span>⏱ 8 Weeks</span><span>👥 2.1K Students</span></div>
+            <div class="course-price">₨1,500</div>
+          </div>
+          <button class="enroll-btn" onclick="openEnroll(this)">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-course="Elementary English (A2)" data-price="2000" data-level="Elementary">
+        <div class="course-thumb thumb-a2">
+          <div class="level-badge">A2</div>
+          <div class="course-emoji">📗</div>
+        </div>
+        <div class="course-body">
+          <div class="course-level-tag elementary">Elementary</div>
+          <div class="course-title">Elementary English — A2</div>
+          <div class="course-desc">Expand vocabulary, learn present & past tense, and form complete sentences with confidence.</div>
+          <ul class="course-topics">
+            <li>✔ Tenses (Present & Past)</li>
+            <li>✔ Vocabulary (1500 words)</li>
+            <li>✔ Reading Short Paragraphs</li>
+            <li>✔ Basic Writing Skills</li>
+          </ul>
+          <div class="course-meta">
+            <div class="course-info"><span>⏱ 10 Weeks</span><span>👥 1.8K Students</span></div>
+            <div class="course-price">₨2,000</div>
+          </div>
+          <button class="enroll-btn" onclick="openEnroll(this)">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-course="Pre-Intermediate English (B1)" data-price="2500" data-level="Pre-Intermediate">
+        <div class="course-thumb thumb-b1">
+          <div class="level-badge">B1</div>
+          <div class="course-emoji">📘</div>
+        </div>
+        <div class="course-body">
+          <div class="course-level-tag pre-inter">Pre-Intermediate</div>
+          <div class="course-title">Pre-Intermediate — B1</div>
+          <div class="course-desc">All major tenses, question formation, speaking in daily conversations and paragraph writing.</div>
+          <ul class="course-topics">
+            <li>✔ All Tenses Complete</li>
+            <li>✔ Spoken English Practice</li>
+            <li>✔ Paragraph Writing</li>
+            <li>✔ Listening & Comprehension</li>
+          </ul>
+          <div class="course-meta">
+            <div class="course-info"><span>⏱ 12 Weeks</span><span>👥 2.4K Students</span></div>
+            <div class="course-price">₨2,500</div>
+          </div>
+          <button class="enroll-btn" onclick="openEnroll(this)">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-course="Intermediate English (B2)" data-price="3000" data-level="Intermediate">
+        <div class="course-thumb thumb-b2">
+          <div class="level-badge">B2</div>
+          <div class="course-emoji">💬</div>
+        </div>
+        <div class="course-body">
+          <div class="course-level-tag intermediate">Intermediate</div>
+          <div class="course-title">Intermediate English — B2</div>
+          <div class="course-desc">Fluent conversations, essay writing, formal emails, and advanced grammar structures.</div>
+          <ul class="course-topics">
+            <li>✔ Fluent Conversation</li>
+            <li>✔ Essay & Email Writing</li>
+            <li>✔ Idioms & Phrasal Verbs</li>
+            <li>✔ Pronunciation Training</li>
+          </ul>
+          <div class="course-meta">
+            <div class="course-info"><span>⏱ 14 Weeks</span><span>👥 1.9K Students</span></div>
+            <div class="course-price">₨3,000</div>
+          </div>
+          <button class="enroll-btn" onclick="openEnroll(this)">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="course-card reveal" data-course="Upper-Intermediate English (C1)" data-price="3500" data-level="Upper-Intermediate">
+        <div class="course-thumb thumb-c1">
+          <div class="level-badge">C1</div>
+          <div class="course-emoji">🎤</div>
+        </div>
+        <div class="course-body">
+          <div class="course-level-tag upper-inter">Upper-Intermediate</div>
+          <div class="course-title">Upper-Intermediate — C1</div>
+          <div class="course-desc">Professional speaking, academic writing, debate skills, and advanced vocabulary usage.</div>
+          <ul class="course-topics">
+            <li>✔ Public Speaking</li>
+            <li>✔ Academic Writing</li>
+            <li>✔ Debate & Discussion</li>
+            <li>✔ Advanced Vocabulary</li>
+          </ul>
+          <div class="course-meta">
+            <div class="course-info"><span>⏱ 16 Weeks</span><span>👥 1.2K Students</span></div>
+            <div class="course-price">₨3,500</div>
+          </div>
+          <button class="enroll-btn" onclick="openEnroll(this)">Enroll Now</button>
+        </div>
+      </div>
+
+      <div class="course-card reveal featured-card" data-course="Advanced English (C2)" data-price="4000" data-level="Advanced">
+        <div class="featured-ribbon">⭐ Most Popular</div>
+        <div class="course-thumb thumb-c2">
+          <div class="level-badge">C2</div>
+          <div class="course-emoji">🏆</div>
+        </div>
+        <div class="course-body">
+          <div class="course-level-tag advanced">Advanced</div>
+          <div class="course-title">Advanced English — C2</div>
+          <div class="course-desc">Near-native fluency, IELTS preparation, business English, and professional communication mastery.</div>
+          <ul class="course-topics">
+            <li>✔ IELTS Preparation</li>
+            <li>✔ Business English</li>
+            <li>✔ Critical Thinking in English</li>
+            <li>✔ Certificate Included</li>
+          </ul>
+          <div class="course-meta">
+            <div class="course-info"><span>⏱ 20 Weeks</span><span>👥 3.1K Students</span></div>
+            <div class="course-price">₨4,000</div>
+          </div>
+          <button class="enroll-btn" onclick="openEnroll(this)">Enroll Now</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ FEATURES ══ -->
+  <section id="features" class="features">
+    <div class="section-header reveal">
+      <div class="section-tag">✨ Why CoreConcepts</div>
+      <h2 class="section-title">Learn Differently</h2>
+      <p class="section-sub">We teach English the way it should be — practically, confidently, and effectively.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon ic1">🇵🇰</div>
+        <div class="feature-title">Taught in Urdu</div>
+        <div class="feature-desc">Our expert instructors explain everything in Urdu so you never feel lost or confused.</div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon ic2">🎯</div>
+        <div class="feature-title">Practical Learning</div>
+        <div class="feature-desc">Real-life conversations, situations and exercises — not just textbook grammar.</div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon ic3">📜</div>
+        <div class="feature-title">Certificate on Completion</div>
+        <div class="feature-desc">Earn a recognized certificate after each level to boost your CV and career prospects.</div>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon ic4">💬</div>
+        <div class="feature-title">Live Speaking Sessions</div>
+        <div class="feature-desc">Weekly live Zoom sessions to practice speaking with your instructor and classmates.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIALS ══ -->
+  <section id="testimonials">
+    <div class="section-header reveal">
+      <div class="section-tag">💬 Student Stories</div>
+      <h2 class="section-title">Real Results, Real People</h2>
+      <p class="section-sub">Thousands of Pakistani students transformed their English skills with CoreConcepts.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Pehle mujhe English bolna bilkul nahi aata tha. Ab main interviews deta hun confidently. CoreConcepts ne meri zindagi badal di!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar av1">A</div>
+          <div><div class="author-name">Ali Hassan</div><div class="author-role">Got job at multinational company</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"B2 course ne mera IELTS 7.0 band dilaya. Teachers bohot caring hain aur har cheez detail mein samjhate hain. Highly recommended!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar av2">S</div>
+          <div><div class="author-name">Sara Malik</div><div class="author-role">IELTS 7.0 — Studying abroad</div></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">"Ghar baithe seekha, fees bhi affordable thi. A1 se C1 tak ka safar bohot enjoyable raha. Ab main English mein blog likhta hun!"</p>
+        <div class="testi-author">
+          <div class="testi-avatar av3">U</div>
+          <div><div class="author-name">Usman Raza</div><div class="author-role">Content Writer & Blogger</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <div class="cta-section">
+    <div class="cta-banner reveal">
+      <div class="cta-icon">🚀</div>
+      <h2>Start Your English Journey Today</h2>
+      <p>Thousands of students already speaking English confidently. Your turn now!</p>
+      <button class="btn-primary" onclick="smoothScroll('courses')">Browse All Courses →</button>
+    </div>
+  </div>
+
+  <!-- ══ FOOTER ══ -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#">
+          <div class="logo-icon">CC</div>
+          <span>CoreConcepts <span class="logo-accent">Academy</span></span>
+        </a>
+        <p>Pakistan's trusted online English learning academy. From basic to advanced — we guide every step.</p>
+        <div class="social-links">
+          <div class="social-btn" title="Facebook">f</div>
+          <div class="social-btn" title="Instagram">📸</div>
+          <div class="social-btn" title="YouTube">▶</div>
+          <div class="social-btn" title="WhatsApp">💬</div>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Courses</h4>
+        <ul>
+          <li><a href="#">Beginner (A1)</a></li>
+          <li><a href="#">Elementary (A2)</a></li>
+          <li><a href="#">Pre-Intermediate (B1)</a></li>
+          <li><a href="#">Intermediate (B2)</a></li>
+          <li><a href="#">Advanced (C1 & C2)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Academy</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Our Teachers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Certificates</a></li>
+          <li><a href="#">Free Resources</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="#">WhatsApp Us></a></li>
+          <li><a href="#">Email Support></a></li>
+          <li><a href="#">Privacy Policy></a></li>
+          <li><a href="#">Refund Policy> Please share your payment screenshot with our team via WhatsApp at [insert number]. Also, ensure that you have not attended classes for the past week. </a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 CoreConcepts Academy. All rights reserved.</p>
+      <p>Made with ❤️ for Pakistani learners</p>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════ -->
+  <!--         ENROLLMENT MODAL                   -->
+  <!-- ══════════════════════════════════════════ -->
+  <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+    <div class="modal" id="enrollModal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+
+      <!-- STEP INDICATOR -->
+      <div class="steps-bar">
+        <div class="step active" id="step1-dot"><span>1</span> Registration</div>
+        <div class="step-line"></div>
+        <div class="step" id="step2-dot"><span>2</span> Payment</div>
+        <div class="step-line"></div>
+        <div class="step" id="step3-dot"><span>3</span> Confirm</div>
+      </div>
+
+      <!-- ── STEP 1: REGISTRATION FORM ── -->
+      <div class="modal-step" id="step1">
+        <div class="modal-header">
+          <h3>📝 Student Registration</h3>
+          <p class="modal-course-name" id="modalCourseName">Course Name</p>
+        </div>
+        <form id="regForm" onsubmit="goToPayment(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="fullName" placeholder="e.g. Muhammad Ali" required/>
+            </div>
+            <div class="form-group">
+              <label>Father's Name *</label>
+              <input type="text" id="fatherName" placeholder="e.g. Muhammad Saleem" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="phone" placeholder="03XX-XXXXXXX" required/>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" id="email" placeholder="email@example.com"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Highest Education *</label>
+              <select id="education" required>
+                <option value="">-- Select --</option>
+                <option>Matric (10th)</option>
+                <option>Intermediate (12th)</option>
+                <option>Bachelor's Degree</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Current Status *</label>
+              <select id="status" required>
+                <option value="">-- Select --</option>
+                <option>Student</option>
+                <option>Employed (Private)</option>
+                <option>Employed (Government)</option>
+                <option>Self-Employed / Business</option>
+                <option>Freelancer</option>
+                <option>Housewife</option>
+                <option>Unemployed / Job Seeker</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>City *</label>
+              <input type="text" id="city" placeholder="e.g. Lahore" required/>
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" id="age" placeholder="e.g. 22" min="10" max="70"/>
+            </div>
+          </div>
+          <div class="form-group full-width">
+            <label>English Level (Self Assessment)</label>
+            <select id="currentLevel">
+              <option value="">-- Select your current level --</option>
+              <option>Zero — Never studied English</option>
+              <option>Beginner — Know alphabets only</option>
+              <option>Elementary — Can make basic sentences</option>
+              <option>Pre-Intermediate — Can have simple conversations</option>
+              <option>Intermediate — Comfortable in basic conversations</option>
+              <option>Advanced — Can speak but need refinement</option>
+            </select>
+          </div>
+          <div class="form-group full-width">
+            <label>Why do you want to learn English?</label>
+            <textarea id="motivation" rows="3" placeholder="e.g. For job interviews, to study abroad, for better career..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-btn">Continue to Payment →</button>
+        </form>
+      </div>
+
+      <!-- ── STEP 2: PAYMENT ── -->
+      <div class="modal-step hidden" id="step2">
+        <div class="modal-header">
+          <h3>💳 Select Payment Method</h3>
+          <p class="modal-course-name" id="modalCourseName2">Course — Amount</p>
+        </div>
+
+        <div class="payment-methods">
+
+          <div class="payment-card" onclick="selectPayment('meezan')">
+            <div class="payment-logo meezan-logo">🏦</div>
+            <div class="payment-info">
+              <div class="payment-name">Meezan Bank</div>
+              <div class="payment-sub">Bank Transfer / Online Banking</div>
+            </div>
+            <div class="payment-check" id="check-meezan">✓</div>
+          </div>
+
+          <div class="payment-card" onclick="selectPayment('card')">
+            <div class="payment-logo card-logo">💳</div>
+            <div class="payment-info">
+              <div class="payment-name">Debit / Credit Card</div>
+              <div class="payment-sub">Visa, Mastercard, PayPro</div>
+            </div>
+            <div class="payment-check" id="check-card">✓</div>
+          </div>
+
+          <div class="payment-card" onclick="selectPayment('jazzcash')">
+            <div class="payment-logo jazz-logo">📱</div>
+            <div class="payment-info">
+              <div class="payment-name">JazzCash</div>
+              <div class="payment-sub">Mobile Account Transfer</div>
+            </div>
+            <div class="payment-check" id="check-jazzcash">✓</div>
+          </div>
+
+          <div class="payment-card" onclick="selectPayment('easypaisa')">
+            <div class="payment-logo easy-logo">🟢</div>
+            <div class="payment-info">
+              <div class="payment-name">EasyPaisa</div>
+              <div class="payment-sub">Mobile Account Transfer</div>
+            </div>
+            <div class="payment-check" id="check-easypaisa">✓</div>
+          </div>
+
+        </div>
+
+        <!-- Payment Details Box -->
+        <div class="payment-details" id="paymentDetails">
+          <div class="detail-box" id="meezanDetails">
+            <h4>🏦 Meezan Bank Details</h4>
+            <div class="detail-row"><span>Account Title:</span><strong>YOUR NAME HERE</strong></div>
+            <div class="detail-row"><span>Account Number:</span><strong>XXXX-XXXX-XXXX</strong></div>
+            <div class="detail-row"><span>IBAN:</span><strong>PKXX MEZN XXXXXXXXXXXX</strong></div>
+            <div class="detail-row"><span>Branch:</span><strong>Your Branch Name</strong></div>
+            <div class="detail-note">⚠️ Send exact amount: <span id="meezan-amount" class="highlight-amount">₨0</span>. After transfer, upload receipt below.</div>
+          </div>
+          <div class="detail-box hidden" id="cardDetails">
+            <h4>💳 Card Payment</h4>
+            <div class="detail-row"><span>Pay via:</span><strong>PayPro / Bank Portal</strong></div>
+            <div class="detail-note">⚠️ After payment of <span id="card-amount" class="highlight-amount">₨0</span>, take a screenshot and upload below.</div>
+          </div>
+          <div class="detail-box hidden" id="jazzcashDetails">
+            <h4>📱 JazzCash Details</h4>
+            <div class="detail-row"><span>Account Title:</span><strong>YOUR NAME HERE</strong></div>
+            <div class="detail-row"><span>JazzCash Number:</span><strong>03XX-XXXXXXX</strong></div>
+            <div class="detail-note">⚠️ Send exact amount: <span id="jazz-amount" class="highlight-amount">₨0</span>. Upload screenshot below.</div>
+          </div>
+          <div class="detail-box hidden" id="easypaisaDetails">
+            <h4>🟢 EasyPaisa Details</h4>
+            <div class="detail-row"><span>Account Title:</span><strong>YOUR NAME HERE</strong></div>
+            <div class="detail-row"><span>EasyPaisa Number:</span><strong>03XX-XXXXXXX</strong></div>
+            <div class="detail-note">⚠️ Send exact amount: <span id="easy-amount" class="highlight-amount">₨00</span>. Upload screenshot below.</div>
+          </div>
+        </div>
+
+        <!-- Receipt Upload -->
+        <div class="receipt-upload" id="receiptUpload">
+          <label class="upload-area" for="receiptFile">
+            <div class="upload-icon">📎</div>
+            <div class="upload-text">Click to Upload Payment Receipt</div>
+            <div class="upload-sub">PNG, JPG or PDF (max 5MB)</div>
+            <input type="file" id="receiptFile" accept="image/*,.pdf" onchange="showFileName(this)"/>
+          </label>
+          <div class="file-name" id="fileName"></div>
+        </div>
+
+        <div class="payment-btns">
+          <button class="btn-outline" onclick="goBack()">← Back</button>
+          <button class="btn-primary" onclick="confirmPayment()">Submit & Enroll →</button>
+        </div>
+      </div>
+
+      <!-- ── STEP 3: CONFIRMATION ── -->
+      <div class="modal-step hidden" id="step3">
+        <div class="success-screen">
+          <div class="success-icon">🎉</div>
+          <h3>Registration Submitted!</h3>
+          <p class="success-msg">Thank you, <strong id="confirmName"></strong>! Your enrollment request for <strong id="confirmCourse"></strong> has been received.</p>
+          <div class="confirm-box">
+            <div class="confirm-row"><span>📱 We will contact you on:</span><strong id="confirmPhone"></strong></div>
+            <div class="confirm-row"><span>⏱ Verification time:</span><strong>24–48 hours</strong></div>
+            <div class="confirm-row"><span>📧 Confirmation sent to:</span><strong id="confirmEmail"></strong></div>
+          </div>
+          <p class="success-note">After payment verification, you will receive your course login details via WhatsApp/Email.</p>
+          <button class="btn-primary" onclick="closeModal()">Done ✓</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
